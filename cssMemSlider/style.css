@@ -118,3 +118,15 @@
     margin: 0 auto;
     border-radius: 50%;
 }
+
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    .controls-dots {
+        margin: 0 auto 5%;
+    }
+}
+
+    
