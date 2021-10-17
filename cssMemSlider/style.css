@@ -1,0 +1,132 @@
+.container {
+    margin: 0 auto;
+    width: 70%;
+    height: 50vh;
+    border-radius: 20px;
+    background-color: rgb(7, 9, 36);
+}
+
+.slider {
+    margin: 0 auto;
+    padding-top: 1em;
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.slider-img {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 35vh;
+    transition: all 0.5s ease-in-out;
+    animation: all 0.5s ease-in-out;
+}
+
+.slider-img.to-left {
+    animation-name: left;
+}
+
+.slider-img.to-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes right-text {
+    from {
+        left: -50%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+.active {
+    display: block;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    width: 100%;
+    height: 10vh;
+}
+
+.controls-info {
+    position: relative;
+    margin: 0%;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    animation: all 0.5s ease-in-out;
+}
+
+.controls-info.to-right {
+    animation-name: right-text;
+}
+
+.controls-dots {
+    display: flex;
+    justify-content: space-around;
+    width: 15%;
+}
+
+.dot-container {
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+}
+
+.dot-container:hover .dot {
+    background-color: white;
+}
+
+.dot {
+    display: flex;
+    align-items: center;
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: violet;
+}
+
+.dot.active::before {
+    content: '';
+    width: 90%;
+    height: 90%;
+    background: rgb(7, 9, 36);
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    .controls-dots {
+        margin: 0 auto 5%;
+    }
+}
+
+    
