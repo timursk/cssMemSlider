@@ -16,9 +16,47 @@
 
 
 .slider-img {
+    position: relative;
     display: none;
     width: 100%;
     height: 35vh;
+    transition: all 0.5s ease-in-out;
+    animation: all 0.5s ease-in-out;
+}
+
+.slider-img.to-left {
+    animation-name: left;
+}
+
+.slider-img.to-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes right-text {
+    from {
+        left: -50%;
+    }
+    to {
+        left: 0%;
+    }
 }
 
 .active {
@@ -34,8 +72,15 @@
 }
 
 .controls-info {
+    position: relative;
     margin: 0%;
     color: white;
+    transition: all 0.5s ease-in-out;
+    animation: all 0.5s ease-in-out;
+}
+
+.controls-info.to-right {
+    animation-name: right-text;
 }
 
 .controls-dots {
