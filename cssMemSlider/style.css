@@ -44,6 +44,16 @@
     width: 15%;
 }
 
+.dot-container {
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+}
+
+.dot-container:hover .dot {
+    background-color: white;
+}
+
 .dot {
     display: flex;
     align-items: center;
@@ -52,10 +62,6 @@
     cursor: pointer;
     border-radius: 50%;
     background-color: violet;
-}
-
-.dot:hover {
-    background-color: white;
 }
 
 .dot.active::before {
